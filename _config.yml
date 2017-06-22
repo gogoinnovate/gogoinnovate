@@ -34,12 +34,10 @@ gems:                   []
 
 markdown:               kramdown
 permalink:              pretty
-pageinate_path:         /page:num
-paginate:               10
+
 
 kramdown:
   input:                GFM
   syntax_highlighter:   rouge
 
 # Gems
-gems:                   [jekyll-paginate]
