@@ -1,0 +1,36 @@
+---
+layout: modal
+---
+
+
+<div class="container">
+                <div class="row">
+                    <div class="col-lg-8 col-lg-offset-2">
+                        <div class="lecture-page" style="margin-top: 100px">
+                            <h2>{{ page.title }}</h2>
+                            <hr class="star-primary">
+                            <img src="/assets/img/{{ page.img }}" class="img-responsive img-centered" alt="{{ post.alt }}">
+                            <p>{{ page.description }}</p>
+                            <ul class="list-inline item-details">
+                                <li>Speaker:
+                                    <strong>{{ page.speaker }}
+                                    </strong>
+                                </li>
+                                <li>Date:
+                                    <strong>{{ page.lecture-date }}
+                                    </strong>
+                                </li>
+                                <li><a href="{{ page.lecture-pdf }}"><strong>View Lecture PDF</strong></a>
+                                </li>
+                                <li><a href="{{ page.lecture-ppt }}"><strong>View Lecture Powerpoint</strong></a>
+                                </li>
+                            </ul>
+                            <article class="post">
+                            <p>{{ content }}</p>
+                            </article>
+                        </div>
+                        <hr>
+                        {% include comments.html %}
+                    </div>
+                </div>
+            </div>

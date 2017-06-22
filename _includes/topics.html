@@ -1,0 +1,41 @@
+<!-- Topics Section -->
+    <section id="topics">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 text-center">
+                    <h2 class="section-heading">Topics</h2>
+                    <h3 class="section-subheading text-muted">caelitus mini vires</h3>
+                </div>
+            </div>
+            <div class="row text-center" id="wigglewrapper"><!--Start Wrapper -->
+                {% for topics in site.categories.topics %}
+                <div class="col-xs-6 col-sm-4 col-md-3">
+                    <div class="thumbnail"><a href="{{ site.baseurl }}{{ topics.url }}">
+                        <img src="/assets/img/topics/{{ topics.thumbnail }}" class="img-responsive" alt="{{ topics.alt }}"></a>
+                        <div class="caption">
+                        <h5 class="text-muted">{{ topics.title }}</h5>
+                        </div>
+                    </div>
+                </div>
+                {% endfor %}
+
+
+                <script>
+                    $(document).ready(function() {
+                        var interval = null;
+                            $('button#buttonStart').ready(function() {
+                                $('div#wigglewrapper img').ClassyWiggle('start');
+                                });
+                                $('button#buttonRandom').click(function() {
+                                    var matchedElementSize = $('div#wigglewrapper img').size();
+                                    interval = setInterval(function() {
+                                $($('div#wigglewrapper img').get(Math.floor(Math.random() * matchedElementSize))).ClassyWiggle('start', {limit: 5});
+                            }, 1000);
+                        });
+                    });
+                </script>
+
+
+            </div><!-- End Wrapper -->
+        </div>
+    </section>

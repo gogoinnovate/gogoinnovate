@@ -1,0 +1,24 @@
+---
+layout: modal
+---
+
+
+<div class="container">
+                <div class="row">
+                    <div class="col-lg-8 col-lg-offset-2">
+                        <div class="topic-page" style="margin-top: 100px">
+                            <h2>{{ page.title }}</h2>
+                            <hr class="star-primary">
+                            <img src="/assets/img/{{ page.img }}" class="img-responsive img-centered" alt="{{ post.alt }}">
+                            <hr>
+                            <article class="post">
+                            <p>{{ content }}</p>
+                            </article>
+                        </div>
+                        <hr>
+                        {% include comments.html %}
+                    </div>
+                </div>
+            </div>
+
+

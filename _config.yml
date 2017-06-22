@@ -1,0 +1,45 @@
+# Site settings
+title:                  GoGoInnovate.com
+email:                  gary@gogoinnovate.com
+description:            "Gary is a passionate advocate for teaching innovation processes to young people and as well as to the business community and he is one of the biggest supporters of and advocates for the Xavier University Center for Innovation and the School of Arts and Innovation."
+url:                    http://gogoinnovate.com
+domain:                 gogoinnovation.com
+
+source:                 ./
+destination:            ./_site
+layouts_dir:            ./_layouts
+plugins_dir:            ./_plugins
+
+include:                [".htaccess"]
+exclude:                [
+                            "bower_components",
+                            "node_modules",
+                            "bower.json",
+                            "Gemfile",
+                            "Gemfile.lock",
+                            "gulpfile.js",
+                            "README.md",
+                            "package.json"
+                        ]
+
+# Filtering Content
+show_drafts:            null
+limit_posts:            0
+future:                 true
+unpublished:            false
+
+# Plugins
+whitelist:              []
+gems:                   []
+
+markdown:               kramdown
+permalink:              pretty
+pageinate_path:         /page:num
+paginate:               10
+
+kramdown:
+  input:                GFM
+  syntax_highlighter:   rouge
+
+# Gems
+gems:                   [jekyll-paginate]
